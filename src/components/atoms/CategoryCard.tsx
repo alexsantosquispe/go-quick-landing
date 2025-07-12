@@ -32,11 +32,13 @@ export const CategoryCard = ({
           />
         </div>
       ) : (
-        <img
-          src={pathImg}
-          className="h-[10.3125rem] w-[10.3125rem] transition-all duration-200 hover:scale-110"
-          alt={`Category ${title}`}
-        />
+        <div className="h-[10.3125rem] w-[10.3125rem]">
+          <img
+            src={pathImg}
+            className="h-[10.3125rem] w-[10.3125rem] transition-all duration-200 hover:scale-110"
+            alt={`Category ${title}`}
+          />
+        </div>
       )}
 
       <div className="flex flex-col items-center gap-[0.625rem]">
