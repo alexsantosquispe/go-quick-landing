@@ -20,6 +20,7 @@ export const CommentsSection = () => {
           <img
             src="/img/people-taking.webp"
             className="h-[35.5625rem] w-[43.3125rem]"
+            alt="People taking"
           />
         </div>
       </div>

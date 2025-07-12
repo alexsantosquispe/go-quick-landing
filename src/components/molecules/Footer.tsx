@@ -1,6 +1,7 @@
-import { AppleIcon } from '../../icons/AppleIcon';
-import { PlayStoreIcon } from '../../icons/PlayStoreIcon';
 import { AppButton } from '../atoms/AppButton';
+import { AppleIcon } from '../../icons/AppleIcon';
+import { Link } from '../atoms/Link';
+import { PlayStoreIcon } from '../../icons/PlayStoreIcon';
 
 const ColumnTitle = ({ title }: { title: string }) => {
   return (
@@ -35,12 +36,11 @@ export const Footer = () => {
           <div className="flex flex-col gap-y-[0.625rem] text-xl font-medium">
             <span>+88012345678910</span>
             <span>+88095645671212</span>
-            <a
+            <Link
               href=""
-              className="text-primary hover:text-primary-hover text-base underline"
-            >
-              contact@example.com
-            </a>
+              label="contact@example.com"
+              className="text-base font-normal"
+            />
           </div>
         </div>
 

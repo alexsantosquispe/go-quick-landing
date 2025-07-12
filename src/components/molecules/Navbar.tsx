@@ -1,10 +1,11 @@
 import { CartIcon, HeartIcon, LogoIcon, UserIcon } from '../../icons';
 
-import cn from 'clsx';
-import { useState } from 'react';
-import { twMerge } from 'tailwind-merge';
 import { IconWithCounter } from '../atoms/IconWithCounter';
+import { Link } from '../atoms/Link';
 import { SearchBar } from '../atoms/SearchBar';
+import cn from 'clsx';
+import { twMerge } from 'tailwind-merge';
+import { useState } from 'react';
 
 const MENU_ITEMS = [
   { id: 'all-categories', label: 'All Categories' },
@@ -17,7 +18,7 @@ export const Navbar = () => {
   const [selectedItemId, setSelectedItemId] = useState(MENU_ITEMS[0].id);
 
   return (
-    <header className="fixed z-50 flex w-full flex-col items-center justify-center bg-white/80 backdrop-blur-lg">
+    <header className="fixed z-50 flex w-full flex-col items-center justify-center bg-white/75 backdrop-blur-xl">
       <div className="flex w-[82.5rem] items-center py-6">
         <div className="flex w-full items-center justify-between">
           <LogoIcon />
@@ -41,8 +42,8 @@ export const Navbar = () => {
                     className={twMerge(
                       'flex w-[10.5625rem] items-center justify-center py-[0.9375rem] leading-5 hover:cursor-pointer',
                       cn({
-                        'bg-primary text-white': isSelected,
-                        'hover:bg-gray-100': !isSelected
+                        'bg-primary font-semibold text-white': isSelected,
+                        'hover:bg-gray-200': !isSelected
                       })
                     )}
                     onClick={() => setSelectedItemId(item.id)}
@@ -55,9 +56,7 @@ export const Navbar = () => {
           </ul>
           <div className="flex w-fit items-center gap-1 text-[0.875rem]">
             Need help?
-            <a href="" className="text-primary hover:text-primary-hover">
-              contact@example.com
-            </a>
+            <Link href="" label="contact@example.com" />
           </div>
         </nav>
       </div>

@@ -14,6 +14,7 @@ export const MobileAppSection = () => {
             <img
               src="/img/phone.webp"
               className="h-[30.9375rem] w-[30.9375rem]"
+              alt="Mobile app image"
             />
           </div>
 

@@ -28,12 +28,14 @@ export const CategoryCard = ({
           <img
             src={pathImg}
             className="h-auto w-[29rem] scale-100 transition-all duration-200 hover:scale-110"
+            alt={`Category ${title}`}
           />
         </div>
       ) : (
         <img
           src={pathImg}
           className="h-[10.3125rem] w-[10.3125rem] transition-all duration-200 hover:scale-110"
+          alt={`Category ${title}`}
         />
       )}
 

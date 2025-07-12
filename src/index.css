@@ -6,8 +6,8 @@
 }
 
 @theme {
-  --color-primary: #05a845;
-  --color-primary-hover: #098038;
+  --color-primary: var(--color-green-800);
+  --color-primary-hover: var(--color-green-600);
   --color-accent: #fe8f17;
   --color-default: #1b1b1b;
   --color-fruits: #fbf3ee;
