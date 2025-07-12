@@ -33,9 +33,10 @@ export const CategoryCard = ({
       ) : (
         <img
           src={pathImg}
-          className="h-[10.3125] w-[10.3125rem] transition-all duration-200 hover:scale-110"
+          className="h-[10.3125rem] w-[10.3125rem] transition-all duration-200 hover:scale-110"
         />
       )}
+
       <div className="flex flex-col items-center gap-[0.625rem]">
         <span className="text-[1.25rem] font-medium">{title}</span>
         <span className="text-sm text-neutral-600">{`${quantity} items`}</span>
