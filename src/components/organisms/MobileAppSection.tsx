@@ -10,12 +10,14 @@ const MobileAppSection = () => {
     <div className="flex w-full justify-center">
       <div className="flex w-[82.5rem] flex-col items-center gap-9 py-20">
         <div className="flex items-center justify-between gap-x-[6.625rem]">
-          <div className="flex w-full rounded-4xl bg-[#FEFAF1] px-[4.656rem] py-[3.594rem]">
-            <img
-              src="/img/phone.webp"
-              className="h-[30.9375rem] w-[30.9375rem]"
-              alt="Mobile app image"
-            />
+          <div className="flex w-full rounded-4xl bg-yellow-50 px-[4.65rem] py-[3.594rem]">
+            <div className="h-[30.9375rem] w-[30.9375rem]">
+              <img
+                src="/img/phone.webp"
+                className="h-[30.9375rem] w-[30.9375rem]"
+                alt="Mobile app image"
+              />
+            </div>
           </div>
 
           <div className="flex flex-col gap-6 px-8">
