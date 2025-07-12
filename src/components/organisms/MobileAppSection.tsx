@@ -1,6 +1,6 @@
+import { AppButton } from '../atoms/AppButton';
 import { AppleIcon } from '../../icons/AppleIcon';
 import { PlayStoreIcon } from '../../icons/PlayStoreIcon';
-import { AppButton } from '../atoms/AppButton';
 
 const description =
   'Lorem ipsum dolor sit amet consectetur. Sit in sed sed rutrum ultrices egestas. Neque leo praesent odio diam. Vel amet vitae pulvinar cursus enim sagittis enim. Cum arcu vitae non scelerisque cursus eget mi.';
@@ -11,7 +11,10 @@ export const MobileAppSection = () => {
       <div className="flex w-[82.5rem] flex-col items-center gap-9 py-20">
         <div className="flex items-center justify-between gap-x-[6.625rem]">
           <div className="flex w-full rounded-4xl bg-[#FEFAF1] px-[4.656rem] py-[3.594rem]">
-            <img src="/img/phone.webp" className="h-[30.9375rem] w-[30.9375]" />
+            <img
+              src="/img/phone.webp"
+              className="h-[30.9375rem] w-[30.9375rem]"
+            />
           </div>
 
           <div className="flex flex-col gap-6 px-8">
