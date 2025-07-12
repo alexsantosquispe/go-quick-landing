@@ -31,7 +31,7 @@ export const CategoryCard = ({
           />
         </div>
       ) : (
-        <div className="flex items-center justify-center rounded-full border-3 border-white p-2 transition-all duration-200 hover:scale-110">
+        <div className="flex h-[10.3125] w-[10.3125rem] items-center justify-center rounded-full border-3 border-white p-2 transition-all duration-200 hover:scale-110">
           <img src={pathImg} className="h-[10.3125] w-[10.3125rem]" />
         </div>
       )}
