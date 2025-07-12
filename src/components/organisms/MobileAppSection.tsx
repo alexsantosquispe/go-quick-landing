@@ -1,11 +1,11 @@
-import { AppButton } from '../atoms/AppButton';
 import { AppleIcon } from '../../icons/AppleIcon';
 import { PlayStoreIcon } from '../../icons/PlayStoreIcon';
+import { AppButton } from '../atoms/AppButton';
 
 const description =
   'Lorem ipsum dolor sit amet consectetur. Sit in sed sed rutrum ultrices egestas. Neque leo praesent odio diam. Vel amet vitae pulvinar cursus enim sagittis enim. Cum arcu vitae non scelerisque cursus eget mi.';
 
-export const MobileAppSection = () => {
+const MobileAppSection = () => {
   return (
     <div className="flex w-full justify-center">
       <div className="flex w-[82.5rem] flex-col items-center gap-9 py-20">
@@ -45,3 +45,5 @@ export const MobileAppSection = () => {
     </div>
   );
 };
+
+export default MobileAppSection;

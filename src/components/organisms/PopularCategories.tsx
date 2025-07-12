@@ -45,7 +45,7 @@ const CATEGORIES = [
   }
 ];
 
-export const PopularCategories = () => {
+const PopularCategories = () => {
   return (
     <div className="flex w-full justify-center">
       <div className="flex w-[82.5rem] flex-col items-center gap-9 py-20">
@@ -71,3 +71,5 @@ export const PopularCategories = () => {
     </div>
   );
 };
+
+export default PopularCategories;

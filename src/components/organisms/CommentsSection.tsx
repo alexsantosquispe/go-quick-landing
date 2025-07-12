@@ -3,7 +3,7 @@ import { QuoteIcon } from '../../icons/QuoteIcon';
 const comment =
   'Lorem ipsum dolor sit amet consectetur. Sit in sed sed rutrum ultrices egestas. Neque leo praesent odio diam. Vel amet vitae pulvinar cursus enim sagittis enim. Cum arcu vitae non scelerisque cursus eget mi.';
 
-export const CommentsSection = () => {
+const CommentsSection = () => {
   return (
     <div className="flex w-full justify-center">
       <div className="flex w-[82.5rem] flex-col items-center gap-9 py-20">
@@ -27,3 +27,5 @@ export const CommentsSection = () => {
     </div>
   );
 };
+
+export default CommentsSection;

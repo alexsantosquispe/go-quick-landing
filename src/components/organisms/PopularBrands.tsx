@@ -11,7 +11,7 @@ import { Logo7 } from '../../assets/Logo7';
 import { Logo8 } from '../../assets/Logo8';
 import { Logo9 } from '../../assets/Logo9';
 
-export const PopularBrands = () => {
+const PopularBrands = () => {
   return (
     <div className="flex w-full justify-center">
       <div className="flex w-[82.5rem] flex-col items-center gap-9 py-20">
@@ -34,3 +34,4 @@ export const PopularBrands = () => {
     </div>
   );
 };
+export default PopularBrands;
