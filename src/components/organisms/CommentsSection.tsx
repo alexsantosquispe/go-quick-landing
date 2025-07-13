@@ -7,7 +7,7 @@ const CommentsSection = () => {
   return (
     <div className="flex w-full justify-center">
       <div className="flex w-[82.5rem] flex-col items-center gap-9 py-20">
-        <div className="flex items-center justify-between gap-[7.75rem]">
+        <div className="flex items-center justify-between gap-[8rem]">
           <div className="flex flex-col gap-6">
             <h2 className="text-4xl font-semibold">What people say about us</h2>
             <div className="flex flex-col">
@@ -17,11 +17,16 @@ const CommentsSection = () => {
               </p>
             </div>
           </div>
-          <img
-            src="/img/people-taking.webp"
-            className="h-[35.5625rem] w-[43.3125rem]"
-            alt="People taking"
-          />
+
+          <div className="flex rounded-4xl bg-amber-100/70 p-8 dark:bg-neutral-800">
+            <div className="h-[30rem] w-[30rem]">
+              <img
+                src="/img/people-taking.webp"
+                className="h-[30rem] w-[30rem] dark:brightness-90"
+                alt="People taking"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
