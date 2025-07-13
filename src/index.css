@@ -1,6 +1,8 @@
 @import './fonts.css';
 @import 'tailwindcss';
 
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+
 :root {
   --font-inter: 'Inter', system-ui, Helvetica, Arial, sans-serif;
 }
@@ -8,7 +10,7 @@
 @theme {
   --color-primary: var(--color-green-800);
   --color-primary-hover: var(--color-green-600);
-  --color-accent: #fe8f17;
+  --color-accent: var(--color-orange-400);
   --color-default: #1b1b1b;
   --color-fruits: #fbf3ee;
   --color-fish: #fce0ca;
@@ -24,5 +26,4 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--font-inter);
-  color: var(--color-default);
 }

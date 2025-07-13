@@ -1,11 +1,11 @@
 import { CartIcon, HeartIcon, LogoIcon, UserIcon } from '../../icons';
 
+import cn from 'clsx';
+import { useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 import { IconWithCounter } from '../atoms/IconWithCounter';
 import { Link } from '../atoms/Link';
 import { SearchBar } from '../atoms/SearchBar';
-import cn from 'clsx';
-import { twMerge } from 'tailwind-merge';
-import { useState } from 'react';
 
 const MENU_ITEMS = [
   { id: 'all-categories', label: 'All Categories' },
@@ -18,12 +18,12 @@ export const Navbar = () => {
   const [selectedItemId, setSelectedItemId] = useState(MENU_ITEMS[0].id);
 
   return (
-    <header className="fixed z-50 flex w-full flex-col items-center justify-center bg-white/75 backdrop-blur-xl">
+    <header className="fixed z-50 flex w-full flex-col items-center justify-center bg-white/80 backdrop-blur-lg dark:bg-black/65">
       <div className="flex w-[82.5rem] items-center py-6">
         <div className="flex w-full items-center justify-between">
           <LogoIcon />
           <SearchBar hasSearchMenu={true} onSearch={() => {}} />
-          <div className="flex gap-5 pr-3">
+          <div className="flex gap-5 pr-3 dark:text-white">
             <IconWithCounter icon={<UserIcon />} />
             <IconWithCounter counter={1} icon={<HeartIcon />} />
             <IconWithCounter counter={2} icon={<CartIcon />} />
@@ -31,7 +31,7 @@ export const Navbar = () => {
         </div>
       </div>
 
-      <div className="flex w-full items-center justify-center border-t border-gray-200">
+      <div className="flex w-full items-center justify-center border-t border-gray-200 dark:border-neutral-500">
         <nav className="flex w-[82.5rem] items-center justify-between">
           <ul className="flex items-center text-[0.875rem]">
             {MENU_ITEMS.map((item) => {
@@ -43,7 +43,8 @@ export const Navbar = () => {
                       'flex w-[10.5625rem] items-center justify-center py-[0.9375rem] leading-5 hover:cursor-pointer',
                       cn({
                         'bg-primary font-semibold text-white': isSelected,
-                        'hover:bg-gray-200': !isSelected
+                        'hover:bg-neutral-100 dark:hover:bg-neutral-600':
+                          !isSelected
                       })
                     )}
                     onClick={() => setSelectedItemId(item.id)}

@@ -10,7 +10,10 @@ export const Link = ({ href, label, className }: LinkProps) => {
   return (
     <a
       href={href}
-      className={twMerge('text-primary hover:underline', className)}
+      className={twMerge(
+        'text-primary dark:text-primary-hover hover:underline',
+        className
+      )}
     >
       {label}
     </a>

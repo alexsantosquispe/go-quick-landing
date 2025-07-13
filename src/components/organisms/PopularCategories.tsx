@@ -6,42 +6,42 @@ const CATEGORIES = [
     title: 'Meat & Fish',
     pathImg: '/img/meat-fish.webp',
     quantity: 15,
-    className: 'bg-fish'
+    className: 'bg-fish dark:bg-rose-950'
   },
   {
     id: 'cooking',
     title: 'Cooking',
     pathImg: '/img/cooking.webp',
     quantity: 252,
-    className: 'bg-cooking'
+    className: 'bg-cooking dark:bg-teal-950'
   },
   {
     id: 'beverages',
     title: 'Beverages',
     pathImg: '/img/beverages.webp',
     quantity: 35,
-    className: 'bg-beverages'
+    className: 'bg-beverages dark:bg-yellow-950'
   },
   {
     id: 'home-cleaning',
     title: 'Home & Cleaning',
     pathImg: '/img/home-cleaning.webp',
     quantity: 80,
-    className: 'bg-home'
+    className: 'bg-home dark:bg-blue-950'
   },
   {
     id: 'pest-control',
     title: 'Pest Control',
     pathImg: '/img/pest-control.webp',
     quantity: 40,
-    className: 'bg-control'
+    className: 'bg-control dark:bg-stone-800'
   },
   {
     id: 'office',
     title: 'Stationery & Office',
     pathImg: '/img/office.webp',
     quantity: 62,
-    className: 'bg-office'
+    className: 'bg-office dark:bg-amber-950'
   }
 ];
 
@@ -57,7 +57,7 @@ const PopularCategories = () => {
               title="Fruit & Vegetables"
               pathImg="/img/fruits-vegetables.webp"
               quantity={2}
-              className="bg-fruits flex-col-reverse p-0 pt-8"
+              className="bg-fruits flex-col-reverse p-0 pt-8 dark:bg-orange-900"
               isLarge
             />
           </div>

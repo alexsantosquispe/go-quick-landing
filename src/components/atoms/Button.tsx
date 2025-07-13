@@ -1,5 +1,5 @@
-import type { ReactNode } from 'react';
 import clsx from 'clsx';
+import type { ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 interface ButtonProps {
@@ -26,7 +26,8 @@ export const Button = ({
       className={twMerge(
         'bg-primary hover:bg-primary-hover flex items-center justify-center rounded-[0.3125rem] p-[0.625rem] text-white transition-colors duration-200 hover:cursor-pointer',
         clsx({
-          'text-default bg-transparent hover:bg-gray-100': isSecondary
+          'text-default bg-transparent hover:bg-gray-100 dark:text-white dark:hover:bg-white/15':
+            isSecondary
         }),
         className
       )}

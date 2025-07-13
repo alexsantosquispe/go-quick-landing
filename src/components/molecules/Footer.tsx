@@ -1,7 +1,7 @@
-import { AppButton } from '../atoms/AppButton';
 import { AppleIcon } from '../../icons/AppleIcon';
-import { Link } from '../atoms/Link';
 import { PlayStoreIcon } from '../../icons/PlayStoreIcon';
+import { AppButton } from '../atoms/AppButton';
+import { Link } from '../atoms/Link';
 
 const ColumnTitle = ({ title }: { title: string }) => {
   return (
@@ -11,7 +11,7 @@ const ColumnTitle = ({ title }: { title: string }) => {
 
 export const Footer = () => {
   return (
-    <div className="flex w-full justify-center bg-gray-200">
+    <div className="flex w-full justify-center bg-neutral-200 dark:bg-neutral-800">
       <div className="flex w-[82.5rem] justify-between p-[3.1875rem]">
         <div className="flex flex-col gap-[1.25rem]">
           <ColumnTitle title="Download our app" />

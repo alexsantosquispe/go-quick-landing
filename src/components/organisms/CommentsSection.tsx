@@ -11,8 +11,8 @@ const CommentsSection = () => {
           <div className="flex flex-col gap-6">
             <h2 className="text-4xl font-semibold">What people say about us</h2>
             <div className="flex flex-col">
-              <QuoteIcon />
-              <p className="text-xl leading-9 font-light text-sky-900 italic">
+              <QuoteIcon className="dark:text-neutral-200" />
+              <p className="text-xl leading-9 font-light text-sky-900 italic dark:text-neutral-200">
                 {comment}
               </p>
             </div>

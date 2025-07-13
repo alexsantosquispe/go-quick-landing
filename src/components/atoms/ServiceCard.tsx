@@ -14,7 +14,7 @@ export const ServiceCard = ({
       <div className="h-[14.625rem] w-[16.875rem]">
         <img
           src={pathImg}
-          className="h-[14.625rem] w-[16.875rem] transition-all duration-300 hover:scale-110"
+          className="h-[14.625rem] w-[16.875rem] transition-all duration-300 hover:scale-110 dark:brightness-75"
           alt={`Service ${title}`}
         />
       </div>

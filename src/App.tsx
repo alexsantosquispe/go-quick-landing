@@ -20,7 +20,7 @@ const MobileAppSection = lazy(
 
 function App() {
   return (
-    <div className="flex min-h-screen w-full flex-col">
+    <div className="text-default dark:bg-default flex min-h-screen w-full flex-col bg-white dark:text-white">
       <Navbar />
       <main className="flex w-full flex-col">
         <Hero />

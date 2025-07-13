@@ -16,7 +16,7 @@ const PopularBrands = () => {
     <div className="flex w-full justify-center">
       <div className="flex w-[82.5rem] flex-col items-center gap-9 py-20">
         <h2 className="text-4xl font-semibold">Popular Brands</h2>
-        <div className="flex w-full flex-wrap items-center justify-between gap-x-24 gap-y-12 text-sky-900">
+        <div className="flex w-full flex-wrap items-center justify-between gap-x-24 gap-y-12 text-sky-900 dark:text-neutral-300">
           <Logo1 />
           <Logo2 />
           <Logo3 />
