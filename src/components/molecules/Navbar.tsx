@@ -1,11 +1,11 @@
 import { CartIcon, HeartIcon, LogoIcon, UserIcon } from '../../icons';
 
-import cn from 'clsx';
-import { useState } from 'react';
-import { twMerge } from 'tailwind-merge';
 import { IconWithCounter } from '../atoms/IconWithCounter';
 import { Link } from '../atoms/Link';
 import { SearchBar } from '../atoms/SearchBar';
+import cn from 'clsx';
+import { twMerge } from 'tailwind-merge';
+import { useState } from 'react';
 
 const MENU_ITEMS = [
   { id: 'all-categories', label: 'All Categories' },
@@ -19,7 +19,7 @@ export const Navbar = () => {
 
   return (
     <header className="fixed z-50 flex w-full flex-col items-center justify-center bg-white/80 backdrop-blur-lg dark:bg-black/65">
-      <div className="flex w-[82.5rem] items-center py-6">
+      <div className="flex w-full items-center px-8 py-6 xl:w-[82.5rem] xl:px-0">
         <div className="flex w-full items-center justify-between">
           <LogoIcon />
           <SearchBar hasSearchMenu={true} onSearch={() => {}} />
