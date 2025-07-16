@@ -5,7 +5,7 @@ import { SearchBar } from '../atoms/SearchBar';
 
 export const Hero = () => {
   return (
-    <div className="mt-[var(--header-height)] flex h-[35.6rem] w-full bg-[url('/img/main-bg.webp')] bg-cover">
+    <div className="mt-16 flex h-[35.6rem] w-full bg-[url('/img/main-bg.webp')] bg-cover md:mt-[var(--header-height)]">
       <div className="flex h-full w-full justify-center bg-black/5 dark:bg-black/55">
         <div className="flex w-[82.5rem] flex-col gap-y-5 self-center">
           <h1 className="max-w-[33rem] text-[3.4375rem] leading-16 font-bold">

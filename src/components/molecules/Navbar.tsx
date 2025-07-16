@@ -1,4 +1,4 @@
-import { CartIcon, HeartIcon, LogoIcon, UserIcon } from '../../icons';
+import { CartIcon, HeartIcon, LogoIcon, MenuIcon, UserIcon } from '../../icons';
 
 import { IconWithCounter } from '../atoms/IconWithCounter';
 import { Link } from '../atoms/Link';
@@ -19,19 +19,27 @@ export const Navbar = () => {
 
   return (
     <header className="fixed z-50 flex w-full flex-col items-center justify-center bg-white/80 backdrop-blur-lg dark:bg-black/65">
-      <div className="flex w-full items-center px-8 py-6 xl:w-[82.5rem] xl:px-0">
-        <div className="flex w-full items-center justify-between">
-          <LogoIcon />
-          <SearchBar hasSearchMenu={true} onSearch={() => {}} />
-          <div className="flex gap-5 pr-3 dark:text-white">
+      <div className="flex w-full items-center border-b border-neutral-200 py-1 pl-4 md:border-none md:py-6 xl:w-[82.5rem] xl:px-0">
+        <div className="flex w-full items-center justify-between gap-x-4">
+          <LogoIcon className="h-auto w-[7.5rem] xl:h-[2.125rem] xl:w-[9.75rem]" />
+          <SearchBar
+            hasSearchMenu={true}
+            onSearch={() => {}}
+            className="hidden md:flex"
+          />
+          <div className="hidden gap-5 pr-3 md:flex dark:text-white">
             <IconWithCounter icon={<UserIcon />} />
             <IconWithCounter counter={1} icon={<HeartIcon />} />
             <IconWithCounter counter={2} icon={<CartIcon />} />
           </div>
+
+          <button className="text-default flex p-4 hover:cursor-pointer md:hidden">
+            <MenuIcon />
+          </button>
         </div>
       </div>
 
-      <div className="flex w-full items-center justify-center border-t border-gray-200 dark:border-neutral-500">
+      <div className="hidden w-full items-center justify-center border-t border-gray-200 md:flex dark:border-neutral-500">
         <nav className="flex w-[82.5rem] items-center justify-between">
           <ul className="flex items-center text-[0.875rem]">
             {MENU_ITEMS.map((item) => {
