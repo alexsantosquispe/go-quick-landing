@@ -1,8 +1,8 @@
 import { Suspense, lazy } from 'react';
 
 import { Footer } from './components/molecules/Footer';
-import { Navbar } from './components/molecules/Navbar';
 import { Hero } from './components/organisms/Hero';
+import { Navbar } from './components/molecules/Navbar';
 import { OurService } from './components/organisms/OurService';
 
 const PopularCategories = lazy(
