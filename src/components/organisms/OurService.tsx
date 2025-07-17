@@ -25,11 +25,11 @@ const SERVICES = [
 
 export const OurService = () => {
   return (
-    <div className="flex w-full justify-center py-20">
+    <div className="flex w-full flex-col items-center gap-y-12 py-8 md:flex-row md:justify-center md:gap-0 md:py-20">
       <ServiceCard {...SERVICES[0]} />
-      <ArrowTopDown className="mt-20" />
+      <ArrowTopDown className="mt-20 hidden md:block" />
       <ServiceCard {...SERVICES[1]} />
-      <ArrowDownTop className="mt-30" />
+      <ArrowDownTop className="mt-30 hidden md:block" />
       <ServiceCard {...SERVICES[2]} />
     </div>
   );

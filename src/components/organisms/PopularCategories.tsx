@@ -48,20 +48,20 @@ const CATEGORIES = [
 const PopularCategories = () => {
   return (
     <div className="flex w-full justify-center">
-      <div className="flex w-[82.5rem] flex-col items-center gap-9 py-20">
+      <div className="flex flex-col items-center gap-9 py-20 xl:w-[82.5rem]">
         <h2 className="text-4xl font-semibold">Popular Categories</h2>
 
-        <div className="flex gap-5">
+        <div className="flex flex-col gap-4 px-4 md:flex-row md:gap-5 md:px-0">
           <div className="flex">
             <CategoryCard
               title="Fruit & Vegetables"
               pathImg="/img/fruits-vegetables.webp"
               quantity={2}
-              className="bg-fruits flex-col-reverse p-0 pt-8 dark:bg-orange-900"
+              className="bg-fruits flex-col-reverse p-0 pt-4 md:p-0 md:pt-8 dark:bg-orange-900"
               isLarge
             />
           </div>
-          <div className="grid grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-5">
             {CATEGORIES.map((item) => (
               <CategoryCard key={item.id} {...item} />
             ))}

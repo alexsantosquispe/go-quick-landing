@@ -8,7 +8,7 @@ export const Hero = () => {
     <div className="mt-16 flex w-full md:mt-[var(--header-height)] md:h-[35.6rem] md:bg-[url('/img/main-bg.webp')] md:bg-cover">
       <div className="flex h-full w-full justify-center bg-black/5 dark:bg-black/55">
         <div className="flex flex-col items-center gap-y-5 self-center py-8 md:items-start md:p-0 xl:w-[82.5rem]">
-          <h1 className="text-center text-5xl leading-12 font-bold md:max-w-[33rem] md:text-left md:text-[3.4375rem] md:leading-16">
+          <h1 className="px-4 text-center text-5xl leading-12 font-bold md:max-w-[33rem] md:p-0 md:text-left md:text-[3.4375rem] md:leading-16">
             We Delivered
             <br />
             to your Doorstep

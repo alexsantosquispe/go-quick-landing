@@ -10,7 +10,7 @@ export const ServiceCard = ({
   description
 }: ServiceCardProps) => {
   return (
-    <article className="flex flex-col justify-center gap-6 px-[1.125rem]">
+    <article className="flex flex-col items-center justify-center gap-3 px-[1.125rem] md:items-start md:gap-6">
       <div className="h-[14.625rem] w-[16.875rem]">
         <img
           src={pathImg}
@@ -19,7 +19,7 @@ export const ServiceCard = ({
         />
       </div>
 
-      <div className="flex max-w-[19.0625rem] flex-col items-center justify-center gap-4 text-center">
+      <div className="flex flex-col items-center justify-center gap-3 text-center md:max-w-[19.0625rem] md:gap-4">
         <span className="text-[1.1875rem] font-semibold">{title}</span>
         <p className="leading-[1.875rem]">{description}</p>
       </div>
