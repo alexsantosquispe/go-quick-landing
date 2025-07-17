@@ -7,7 +7,7 @@ interface AppButtonProps {
 
 export const AppButton = ({ title, icon }: AppButtonProps) => {
   return (
-    <button className="flex rounded-[0.625rem] bg-sky-950 py-3 text-white dark:bg-neutral-600 dark:text-neutral-100">
+    <button className="flex min-w-[8rem] rounded-[0.625rem] bg-sky-950 py-3 text-white dark:bg-neutral-600 dark:text-neutral-100">
       <div className="flex items-center justify-center px-2 py-0 md:px-4">
         {icon}
       </div>
