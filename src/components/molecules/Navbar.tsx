@@ -3,6 +3,7 @@ import { CartIcon, HeartIcon, LogoIcon, MenuIcon, UserIcon } from '../../icons';
 import cn from 'clsx';
 import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
+import { Button } from '../atoms/Button';
 import { IconWithCounter } from '../atoms/IconWithCounter';
 import { Link } from '../atoms/Link';
 import { NavBarItem } from '../atoms/NavBarItem';
@@ -39,12 +40,12 @@ export const Navbar = () => {
             <IconWithCounter counter={2} icon={<CartIcon />} />
           </div>
 
-          <button
-            className="text-default flex p-4 hover:cursor-pointer md:hidden"
+          <Button
             onClick={toggleNavBarMenu}
-          >
-            <MenuIcon />
-          </button>
+            ariaLabel="Menu icon button"
+            icon={<MenuIcon />}
+            isSecondary={true}
+          />
         </div>
       </div>
 
