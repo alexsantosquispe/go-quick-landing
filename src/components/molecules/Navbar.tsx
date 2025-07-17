@@ -1,11 +1,12 @@
 import { CartIcon, HeartIcon, LogoIcon, MenuIcon, UserIcon } from '../../icons';
 
+import cn from 'clsx';
+import { useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 import { IconWithCounter } from '../atoms/IconWithCounter';
 import { Link } from '../atoms/Link';
+import { NavBarItem } from '../atoms/NavBarItem';
 import { SearchBar } from '../atoms/SearchBar';
-import cn from 'clsx';
-import { twMerge } from 'tailwind-merge';
-import { useState } from 'react';
 
 const MENU_ITEMS = [
   { id: 'all-categories', label: 'All Categories' },
@@ -16,10 +17,15 @@ const MENU_ITEMS = [
 
 export const Navbar = () => {
   const [selectedItemId, setSelectedItemId] = useState(MENU_ITEMS[0].id);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleNavBarMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <header className="fixed z-50 flex w-full flex-col items-center justify-center bg-white/80 backdrop-blur-lg dark:bg-black/65">
-      <div className="flex w-full items-center border-b border-neutral-200 py-1 pl-4 md:border-none md:py-6 xl:w-[82.5rem] xl:px-0">
+      <div className="flex w-full items-center border-b border-neutral-200 py-1 pl-4 md:border-none md:px-4 md:py-6 xl:w-[82.5rem] xl:px-0">
         <div className="flex w-full items-center justify-between gap-x-4">
           <LogoIcon className="h-auto w-[7.5rem] xl:h-[2.125rem] xl:w-[9.75rem]" />
           <SearchBar
@@ -33,37 +39,36 @@ export const Navbar = () => {
             <IconWithCounter counter={2} icon={<CartIcon />} />
           </div>
 
-          <button className="text-default flex p-4 hover:cursor-pointer md:hidden">
+          <button
+            className="text-default flex p-4 hover:cursor-pointer md:hidden"
+            onClick={toggleNavBarMenu}
+          >
             <MenuIcon />
           </button>
         </div>
       </div>
 
-      <div className="hidden w-full items-center justify-center border-t border-gray-200 md:flex dark:border-neutral-500">
-        <nav className="flex w-[82.5rem] items-center justify-between">
-          <ul className="flex items-center text-[0.875rem]">
+      <div
+        className={twMerge(
+          'hidden w-full border-t border-gray-200 md:flex md:items-center md:justify-center dark:border-neutral-500',
+          cn({ flex: isMenuOpen, hidden: !isMenuOpen })
+        )}
+      >
+        <nav className="flex w-full flex-col md:flex-row md:items-center md:justify-between xl:w-[82.5rem]">
+          <ul className="flex flex-col text-[0.875rem] md:flex-row md:items-center">
             {MENU_ITEMS.map((item) => {
               const isSelected = selectedItemId === item.id;
               return (
-                <li key={item.id}>
-                  <button
-                    className={twMerge(
-                      'flex w-[10.5625rem] items-center justify-center py-[0.9375rem] leading-5 hover:cursor-pointer',
-                      cn({
-                        'bg-primary font-semibold text-white': isSelected,
-                        'hover:bg-neutral-100 dark:hover:bg-neutral-600':
-                          !isSelected
-                      })
-                    )}
-                    onClick={() => setSelectedItemId(item.id)}
-                  >
-                    {item.label}
-                  </button>
-                </li>
+                <NavBarItem
+                  key={item.id}
+                  isSelected={isSelected}
+                  setSelectedItemId={setSelectedItemId}
+                  {...item}
+                />
               );
             })}
           </ul>
-          <div className="flex w-fit items-center gap-1 text-[0.875rem]">
+          <div className="mx-4 flex w-fit items-center gap-1 py-[0.9375rem] text-[0.875rem]">
             Need help?
             <Link href="" label="contact@example.com" />
           </div>
