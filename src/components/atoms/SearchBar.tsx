@@ -1,8 +1,8 @@
 import { SearchIcon, SearchMenuIcon } from '../../icons';
 
-import { Button } from './Button';
 import cn from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import { Button } from './Button';
 
 interface SearchBarProps {
   onSearch: (value: string) => void;
@@ -38,7 +38,7 @@ export const SearchBar = ({
 
       <div
         className={twMerge(
-          'flex min-w-[22.5rem] flex-1 p-1 xl:w-[34.625rem]',
+          'flex min-w-[21rem] flex-1 p-1 xl:w-[34.625rem]',
           cn({
             'border-l border-gray-200 dark:border-neutral-500': hasSearchMenu
           })

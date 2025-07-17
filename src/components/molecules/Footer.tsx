@@ -12,7 +12,7 @@ const ColumnTitle = ({ title }: { title: string }) => {
 export const Footer = () => {
   return (
     <div className="flex w-full justify-center bg-neutral-200 dark:bg-neutral-800">
-      <div className="grid grid-cols-2 gap-4 px-4 py-8 md:flex md:flex-row md:justify-between md:gap-0 md:px-0 md:py-[3.1875rem] xl:w-[82.5rem]">
+      <div className="grid grid-cols-2 gap-8 px-4 py-12 md:flex md:flex-row md:justify-between md:gap-0 md:px-0 md:py-[3.1875rem] xl:w-[82.5rem]">
         <div className="flex flex-col gap-[1.25rem]">
           <ColumnTitle title="Download our app" />
           <div className="flex flex-col gap-y-[0.625rem]">
@@ -33,20 +33,20 @@ export const Footer = () => {
 
         <div className="flex flex-col gap-[1.25rem]">
           <ColumnTitle title="Need help" />
-          <div className="flex flex-col gap-y-[0.625rem] text-xl font-medium">
+          <div className="flex flex-col gap-y-[0.625rem] text-sm font-medium md:text-xl">
             <span>+88012345678910</span>
             <span>+88095645671212</span>
             <Link
               href=""
               label="contact@example.com"
-              className="text-base font-normal"
+              className="font-normal md:text-base"
             />
           </div>
         </div>
 
         <div className="flex flex-col gap-[1.25rem]">
           <ColumnTitle title="Customer" />
-          <ul className="flex flex-col gap-y-2">
+          <ul className="flex flex-col gap-y-2 text-sm md:text-base">
             <li>My account</li>
             <li>My orders</li>
             <li>Return orders</li>
@@ -56,7 +56,7 @@ export const Footer = () => {
 
         <div className="flex flex-col gap-[1.25rem]">
           <ColumnTitle title="Information" />
-          <ul className="flex flex-col gap-y-2">
+          <ul className="flex flex-col gap-y-2 text-sm md:text-base">
             <li>About us</li>
             <li>Contact us</li>
             <li>Shipping & return</li>
