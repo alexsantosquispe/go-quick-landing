@@ -12,7 +12,7 @@ const ColumnTitle = ({ title }: { title: string }) => {
 export const Footer = () => {
   return (
     <div className="flex w-full justify-center bg-neutral-200 dark:bg-neutral-800">
-      <div className="flex w-[82.5rem] justify-between p-[3.1875rem]">
+      <div className="grid grid-cols-2 gap-4 px-4 py-8 md:flex md:flex-row md:justify-between md:gap-0 md:px-0 md:py-[3.1875rem] xl:w-[82.5rem]">
         <div className="flex flex-col gap-[1.25rem]">
           <ColumnTitle title="Download our app" />
           <div className="flex flex-col gap-y-[0.625rem]">
